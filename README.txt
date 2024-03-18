@@ -11,3 +11,6 @@ https://fxdocs.github.io/docs/html5/
 
 Add VM Option для переменной среды JavaFx
 https://openjfx.io/openjfx-docs/
+
+Установка перемнной среды (set):
+setx PATH_TO_FX "Y:\Гневашев\openjfx-21.0.2_windows-x64_bin-sdk\javafx-sdk-21.0.2\lib"
