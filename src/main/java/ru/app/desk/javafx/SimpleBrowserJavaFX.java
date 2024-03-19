@@ -1,6 +1,8 @@
 package ru.app.desk.javafx;
 
 import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
@@ -17,9 +19,15 @@ public class SimpleBrowserJavaFX extends Application {
         BorderPane root = new BorderPane();
 
         TextField urlField = new TextField("https://www.google.com");
-        Button goButton = new Button("Go");
-        Button backButton = new Button("Back");
-        Button forwardButton = new Button("Forward");
+        Button goButton = new Button("Перейти");
+        Button backButton = new Button("Назад");
+        Button forwardButton = new Button("Вперед");
+        HBox.setMargin(backButton, new Insets(5, 0, 0, 5));
+        HBox.setMargin(goButton, new Insets(5, 0, 0, 2));
+        HBox.setMargin(forwardButton, new Insets(5, 0, 0, 2));
+        HBox.setMargin(urlField, new Insets(5, 0, 0, 5));
+
+        HBox.setHgrow(urlField, Priority.ALWAYS);
 
         HBox buttonBox = new HBox(backButton, forwardButton);
         buttonBox.setSpacing(5);
@@ -61,7 +69,7 @@ public class SimpleBrowserJavaFX extends Application {
 
         Scene scene = new Scene(root, 800, 600);
 
-        primaryStage.setTitle("Simple Browser");
+        primaryStage.setTitle("Браузер");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
